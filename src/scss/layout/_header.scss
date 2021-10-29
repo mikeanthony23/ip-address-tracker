@@ -1,0 +1,94 @@
+@use '../abstracts/abstractsIndex' as *;
+
+body {
+  font-family: $priFont;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('@images/header-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6rem;
+  @include mediaMin(600px) {
+    padding-bottom: 10rem;
+  }
+
+  &__title-name {
+    text-align: center;
+    padding: 2rem;
+    @include mediaMin(600px) {
+      padding: 3rem;
+    }
+    a {
+      color: white;
+      font-size: 3.2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.form {
+  $borderRadius: 0.5rem;
+  $removeBorderColor: none;
+  width: 28.5rem;
+  display: flex;
+  @include mediaMin(600px) {
+    width: 60%;
+    max-width: 50rem;
+  }
+  &__search-input {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.8rem 2rem;
+    width: 100%;
+    position: relative;
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    border: $removeBorderColor;
+    @include mediaMin(600px) {
+      font-size: 1.5rem;
+      padding: 1.3rem 2.3rem;
+    }
+
+    @include mediaMin(900px) {
+      font-size: $fontSizeInput;
+      padding: 1.5rem 3rem;
+    }
+
+    &::placeholder {
+      font-size: 1.2rem;
+      font-weight: 500;
+      @include mediaMin(600px) {
+        font-size: 1.5rem;
+      }
+      @include mediaMin(900px) {
+        font-size: $fontSizeInput;
+      }
+    }
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+  &__submit-btn {
+    width: 5rem;
+    background: black;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    border-color: black;
+    border: none;
+    cursor: pointer;
+    &::after {
+      content: url('@public/icon-arrow.svg');
+    }
+  }
+
+  &__reduce-opacity {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
