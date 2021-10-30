@@ -1,4 +1,6 @@
-# Welcome to IP Tracker
+# Welcome to IP Address Tracker
+
+![ip-address-tracker-design](https://user-images.githubusercontent.com/82145849/139475597-043b1393-f6dd-46e9-ad46-d1e0f111bab5.png)
 
 ## Built with
 
@@ -13,13 +15,13 @@
 ## Quick start guide
 
 - npm install
-  install dependencies
+  > install dependencies
 
 - npm start
-  starts a development server
+  > starts a development server
 
 - npm build
-  build for production or run it locally  `http-server ./dist --port(optional)`
+  > build for production or run it locally `http-server ./dist --port(optional)`
 
   
 
