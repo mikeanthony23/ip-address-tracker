@@ -1,12 +1,11 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const paths = require('./paths')
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [`${paths.src}/js/vendor.js`, `${paths.src}/index.js`],
+  entry: [`${paths.src}/index.js`],
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -38,8 +37,7 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'WEBPACK Boilerplate',
-      favicon: `${paths.public}/favicon.png`,
+      favicon: `${paths.public}/images/favicon.png`,
       template: `${paths.src}/template.html`, // template file
       filename: 'index.html', // output file
     }),
@@ -60,7 +58,7 @@ module.exports = {
 
       // Fonts and SVGs: Inline files
       // this rule is for inlining assests or resource from directly from html
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+      { test: /\.(woff(2)?|eot|ttf|otf|svg)$/, type: 'asset/inline' },
     ],
   },
 
@@ -69,8 +67,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@src': paths.src,
+      '@scss': `${paths.src}/scss`,
       '@public': paths.public,
-      '@images': `${paths.src}/images`,
+      '@fonts': `${paths.public}/fonts`,
+      '@images': `${paths.public}/images`,
     },
   },
 }
