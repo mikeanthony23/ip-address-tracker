@@ -17,15 +17,12 @@
 ## Quick start guide
 
 - npm install
+
   > install dependencies
 
-- npm start
+- npm run start
+
   > starts a development server
 
-- npm build
-  > build for production or run it locally `http-server ./dist --port(optional)`
-
-  
-
-  
-
+- npm run build
+  > production build you can also simply view it using `http-server ./dist --proxy http://[your ip]:[desired port]?`
