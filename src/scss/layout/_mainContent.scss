@@ -165,7 +165,7 @@
       font-size: 1.5rem;
     }
     &::after {
-      content: url('/src/images/error_icon.svg');
+      content: url('@images/error_icon.svg');
       transform: scale(0.8);
     }
   }
@@ -206,7 +206,7 @@
       background: transparent;
     }
     &::before {
-      content: url('@public/scroll-to-top.png');
+      content: url('@images/scroll-to-top.png');
     }
   }
 }

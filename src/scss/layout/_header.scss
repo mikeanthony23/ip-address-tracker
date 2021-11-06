@@ -83,7 +83,7 @@ body {
     border: none;
     cursor: pointer;
     &::after {
-      content: url('@public/icon-arrow.svg');
+      content: url('@images/icon-arrow.svg');
     }
   }
 
